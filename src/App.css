@@ -1,0 +1,58 @@
+body{
+    padding-top: 80px;
+}
+.custom-before::before{
+    content: 'HAND CRAFT POTTERY';
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    font-size: 20px;
+    opacity: 0.3;
+    letter-spacing: 0.2rem;
+    transform: translateX(-50%) rotate(-90deg);
+}
+.showcase-before::before{
+    content: "FEATURE PRODUCTS";
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.3;
+    letter-spacing: 0.2rem;
+    right: 0;
+    top: 50%;
+    transform: translateY(-100%) rotate(-90deg);
+}
+
+.product:hover img{
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+.product:hover{
+    border-color: red;
+    transition: 0.4s ease;
+}
+
+
+/* *** utilities ***  */
+.font-logo{
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+}
+.font-pacifico{
+    font-family: 'Pacifico', sans-serif;
+}
+.font-play{
+    font-family: 'Playfair Display', sans-serif;
+    color: #ac1313;
+    font-size: 68px;
+    line-height: 68px;
+    font-weight: 400;
+}
