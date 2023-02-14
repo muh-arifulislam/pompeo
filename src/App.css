@@ -56,3 +56,11 @@ body{
     line-height: 68px;
     font-weight: 400;
 }
+@media only screen and (max-width:570px) {
+    .custom-before::before{
+        content: "";
+    }
+    .showcase-before::before{
+        content: "";
+    }
+}

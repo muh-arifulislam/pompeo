@@ -23,16 +23,18 @@ const Home = () => {
   return (
     <div className="">
       <HeroBanner banner={bottomBanner}></HeroBanner>
-      <section>
+      <section className="lg:px-[100px] px-[20px] border-y py-[100px]">
         <Categories></Categories>
       </section>
-      <section>
+      <section className="lg:px-[100px] px-[20px] py-[100px] border-b">
         <Showcase></Showcase>
       </section>
-      <section className="px-[100px] py-[100px]">
+      <section className="lg:px-[100px] px-[20px] py-[100px]">
         <h4 className="text-center mb-[20px]">OUR ONLINE STORE</h4>
-        <h2 className="text-4xl text-center mb-[50px]">Pottery Collection</h2>
-        <div className="grid grid-cols-3 gap-[20px]">
+        <h2 className="text-4xl text-center mb-[50px] lg:px-0 px-[20px]">
+          Pottery Collection
+        </h2>
+        <div className="lg:px-0 px-[20px] grid lg:grid-cols-3 grid-cols-1 gap-[20px]">
           <Product></Product>
           <Product></Product>
           <Product></Product>

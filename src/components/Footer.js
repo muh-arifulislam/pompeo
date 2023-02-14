@@ -5,13 +5,13 @@ import envelope from "../assets/icon/envelope.png";
 const Footer = () => {
   return (
     <footer className="">
-      <div className="text-center px-[100px] mb-[100px]">
+      <div className="text-center lg:px-[100px] px-[40px] mb-[100px]">
         <h2 className="text-3xl font-logo">Pompeo</h2>
-        <p className="w-[30vw] mx-auto mt-[20px]">
+        <p className="lg:w-[30vw] w-[80%] mx-auto mt-[20px]">
           I have always striven to fix beauty in wood, stone, glass or pottery,
           that has been my creed.
         </p>
-        <div className="grid grid-cols-3 mt-[70px]">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-0 gap-[20px] mt-[70px]">
           <div>
             <img className="w-[40px] mx-auto mb-[10px]" src={envelope} alt="" />
             <h5 className="text-black text-[14px] font-semibold mb-[20px]">
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="py-[30px] bg-slate-100 border-t text-center">
-        <p className="text-slate-600">
+        <p className="text-slate-600 px-[40px]">
           <small>
             Template design by Dorian Hoxha | Website developed by{" "}
             <a

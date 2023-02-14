@@ -6,7 +6,7 @@ const Header = () => {
     <header className="fixed w-[100%] top-0 bg-white h-[80px] grid content-center shadow-md z-50">
       <div className="px-[7vw] flex items-center justify-between ">
         <div>
-          <h3 className="text-xl">Pompeo</h3>
+          <h3 className="text-xl font-logo">Pompeo</h3>
         </div>
         <div>
           <nav className="flex items-center">

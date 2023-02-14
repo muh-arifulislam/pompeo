@@ -14,7 +14,7 @@ const Banner = ({ banner }) => {
         backgroundSize: "cover",
       }}
     >
-      <div className="px-[100px] grid grid-cols-2 items-center">
+      <div className="lg:px-[100px] px-[40px] grid lg:grid-cols-2 grid-cols-1 items-center">
         <div className="">
           <h3 className="mb-[15px]">POMPEO POTTERY</h3>
           <h2 className="text-5xl leading-[58px] font-semibold mb-[10px]">

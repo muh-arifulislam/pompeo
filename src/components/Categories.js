@@ -2,12 +2,12 @@ import React from "react";
 import pot from "../assets/images/pot.png";
 const Categories = () => {
   return (
-    <div className="px-[100px] border border-y py-[100px]">
+    <div className="">
       <div className="text-center">
         <h4 className="text-xl mb-[40px]">Product Categories</h4>
         <h2 className="text-4xl mb-[60px]">Porcelain & Pottery</h2>
       </div>
-      <div className=" flex justify-around relative custom-before">
+      <div className="flex lg:flex-row flex-col items-center lg:gap-y-[0px] gap-y-[40px] justify-around relative custom-before ">
         <div
           className="w-[240px] h-[240px] rounded-full
        bg-red-800 flex flex-col justify-center items-center border-[30px] border-red-500"
@@ -36,7 +36,7 @@ const Categories = () => {
           </h4>
         </div>
       </div>
-      <div className="mt-[80px] flex gap-[100px]">
+      <div className="mt-[80px] lg:px-0 px-[20px] flex lg:flex-row flex-col gap-[100px]">
         <div>
           <h2 className="text-[2rem] leading-[40px] mb-[20px]">
             Hand Grafted <br /> Pottery since 1990
