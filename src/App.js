@@ -9,7 +9,7 @@ import Shop from "./pages/Shop";
 function App() {
   return (
     <div className="App">
-      {/* <Header></Header> */}
+      <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/about-us" element={<About></About>}></Route>
