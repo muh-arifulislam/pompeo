@@ -4,7 +4,7 @@ import call from "../assets/icon/call.png";
 import envelope from "../assets/icon/envelope.png";
 const Footer = () => {
   return (
-    <footer className="">
+    <footer className="pt-[100px] bg-slate-100">
       <div className="text-center lg:px-[100px] px-[40px] mb-[100px]">
         <h2 className="text-3xl font-logo">Pompeo</h2>
         <p className="lg:w-[30vw] w-[80%] mx-auto mt-[20px]">
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-[30px] bg-slate-100 border-t text-center">
+      <div className="py-[30px] bg-slate-200 border-t text-center">
         <p className="text-slate-600 px-[40px]">
           <small>
             Template design by Dorian Hoxha | Website developed by{" "}

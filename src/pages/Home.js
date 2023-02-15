@@ -9,7 +9,6 @@ import image_01 from "../assets/images/bg_03.png";
 import bg_02 from "../assets/images/banner_02.jpeg";
 import Banner from "../components/Banner";
 import Newsletter from "../components/Newsletter";
-import Footer from "../components/Footer";
 const bottomBanner = {
   title: "Ready to start shopping?",
   description:
@@ -21,7 +20,7 @@ const bottomBanner = {
 };
 const Home = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <HeroBanner banner={bottomBanner}></HeroBanner>
       <section className="lg:px-[100px] px-[20px] border-y py-[100px]">
         <Categories></Categories>
@@ -52,7 +51,6 @@ const Home = () => {
       <section>
         <Newsletter></Newsletter>
       </section>
-      <Footer></Footer>
     </div>
   );
 };
