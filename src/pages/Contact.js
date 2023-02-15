@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg from "../assets/images/bg_04.jpg";
 import image from "../assets/images/tea.jpeg";
+import scrollTop from "../hooks/useScrollTop";
 const Contact = () => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
   return (
     <div className="bg-slate-100">
       <div

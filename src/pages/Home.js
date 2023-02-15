@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import Categories from "../components/Categories";
 import HeroBanner from "../components/HeroBanner";
@@ -9,6 +9,7 @@ import image_01 from "../assets/images/bg_03.png";
 import bg_02 from "../assets/images/banner_02.jpeg";
 import Banner from "../components/Banner";
 import Newsletter from "../components/Newsletter";
+import scrollTop from "../hooks/useScrollTop";
 const bottomBanner = {
   title: "Ready to start shopping?",
   description:
@@ -19,6 +20,9 @@ const bottomBanner = {
   buttonUrl: "www.google.com",
 };
 const Home = () => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
   return (
     <div className="overflow-hidden">
       <HeroBanner banner={bottomBanner}></HeroBanner>

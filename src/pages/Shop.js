@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg from "../assets/images/bg_04.jpg";
 import Newsletter from "../components/Newsletter";
 import Product from "../components/Product";
+import scrollTop from "../hooks/useScrollTop";
 const Shop = () => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
   return (
     <div>
       <div

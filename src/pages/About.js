@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg from "../assets/images/bg_about-us.jpg";
 import Artist from "../components/Artist";
 import Categories from "../components/Categories";
 import image from "../assets/images/showcase_item_01.png";
 import image2 from "../assets/images/showcase_item_02.png";
+import scrollTop from "../hooks/useScrollTop";
 const About = () => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
   return (
     <section>
       <div

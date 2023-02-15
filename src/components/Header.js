@@ -26,10 +26,10 @@ const Header = () => {
                       <Link to="/">HOME</Link>
                     </li>
                     <li className="px-[20px] hover:text-black transition">
-                      <Link to="/about-us">ABOUT</Link>
+                      <Link to="/shop">SHOP</Link>
                     </li>
                     <li className="px-[20px] hover:text-black transition">
-                      <Link to="/shop">SHOP</Link>
+                      <Link to="/about-us">ABOUT US</Link>
                     </li>
                     <li className="px-[20px] hover:text-black transition">
                       <Link to="/contact-us">CONTACT</Link>
@@ -37,11 +37,11 @@ const Header = () => {
                   </ul>
                 </div>
                 <div className="flex items-center text-slate-600">
+                  <span className="w-[1px] h-[30px] bg-slate-300 mr-[20px]"></span>
                   <button
                     onClick={() => setActiveCart(true)}
                     className="flex items-center"
                   >
-                    <span className="w-[1px] h-[30px] bg-slate-300 mr-[20px]"></span>
                     <span className="px-[2px]">
                       <FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon>
                     </span>
@@ -49,7 +49,7 @@ const Header = () => {
                   </button>
                   <button
                     onClick={() => setActive(!active)}
-                    className="pl-[30px] pr-[10px] text-[24px] lg:hidden inline"
+                    className="ml-[20px] px-[10px] text-[24px] lg:hidden inline"
                   >
                     <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
                   </button>
@@ -73,13 +73,13 @@ const Header = () => {
               </Link>
             </li>
             <li className="p-[20px] border-y">
-              <Link onClick={() => setActive(!active)} to="/about-us">
-                About
+              <Link onClick={() => setActive(!active)} to="/shop">
+                SHOP
               </Link>
             </li>
             <li className="p-[20px] border-y">
-              <Link onClick={() => setActive(!active)} to="shop">
-                SHOP
+              <Link onClick={() => setActive(!active)} to="/about-us">
+                ABOUT US
               </Link>
             </li>
             <li className="p-[20px] border-y">
@@ -92,7 +92,7 @@ const Header = () => {
       </nav>
       <aside>
         <div
-          className={`fixed top-0 w-[100vw] h-[100vh] z-[9999999999] lg:w-[35%] h-[100%] w-[100vw] bg-slate-50 ${
+          className={`fixed top-0 w-[100vw] h-[100vh] z-[9999999999] lg:w-[35%]  bg-slate-50 ${
             activeCart
               ? "translate-x-[0] transition ease duration-500"
               : "translate-x-[-100%] transition ease duration-500"
@@ -100,19 +100,27 @@ const Header = () => {
         >
           <div className={``}>
             <div
-              className="py-[10px] px-[24px] border-y
+              className="py-[10px] pl-[24px] pr-[14px] border-y
             flex items-center justify-between"
             >
               <h5 className="text-[15px] font-semibold">My Cart</h5>
               <button
                 onClick={() => setActiveCart(false)}
-                className="text-[24px]"
+                className="text-[24px] px-[10px]"
               >
                 <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
               </button>
             </div>
           </div>
         </div>
+        <div
+          onClick={() => setActiveCart(false)}
+          className={`bg-black opacity-80 fixed top-0 right-0 h-[100vh] w-[65vw] z-[50] ${
+            activeCart
+              ? "scale-1 transition ease duration-[0.6s]"
+              : "scale-0 transition ease duration-[0.6s]"
+          }`}
+        ></div>
       </aside>
     </header>
   );
