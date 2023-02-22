@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Cart from "./Cart";
 const Header = () => {
   const [active, setActive] = useState(false);
   const [activeCart, setActiveCart] = useState(false);
@@ -90,38 +91,7 @@ const Header = () => {
           </ul>
         </div>
       </nav>
-      <aside>
-        <div
-          className={`fixed top-0 w-[100vw] h-[100vh] z-[9999999999] lg:w-[35%]  bg-slate-50 ${
-            activeCart
-              ? "translate-x-[0] transition ease duration-500"
-              : "translate-x-[-100%] transition ease duration-500"
-          }`}
-        >
-          <div className={``}>
-            <div
-              className="py-[10px] pl-[24px] pr-[14px] border-y
-            flex items-center justify-between"
-            >
-              <h5 className="text-[15px] font-semibold">My Cart</h5>
-              <button
-                onClick={() => setActiveCart(false)}
-                className="text-[24px] px-[10px]"
-              >
-                <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          onClick={() => setActiveCart(false)}
-          className={`bg-black opacity-80 fixed top-0 right-0 h-[100vh] w-[65vw] z-[50] ${
-            activeCart
-              ? "scale-1 transition ease duration-[0.6s]"
-              : "scale-0 transition ease duration-[0.6s]"
-          }`}
-        ></div>
-      </aside>
+      <Cart setActiveCart={setActiveCart} activeCart={activeCart}></Cart>
     </header>
   );
 };

@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import bg from "../assets/images/bg_04.jpg";
 import Newsletter from "../components/Newsletter";
 import Product from "../components/Product";
 import scrollTop from "../hooks/useScrollTop";
 const Shop = () => {
+  const [products, setProducts] = useState([]);
   useEffect(() => {
     scrollTop();
+    fetch("products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
   }, []);
   return (
     <div>
@@ -32,20 +36,9 @@ const Shop = () => {
         <h5 className="text-center mb-[20px]">OUR ONLINE STORE</h5>
         <h2 className="text-center text-4xl font-bold">Ceramic Collection</h2>
         <div className="mt-[50px] grid lg:grid-cols-3 grid-cols-1 gap-[20px]">
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
+          {products?.map((product) => (
+            <Product key={product.trackNumber} product={product}></Product>
+          ))}
         </div>
       </div>
       <div className="py-[100px]">

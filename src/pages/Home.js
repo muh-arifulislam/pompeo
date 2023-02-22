@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
 import Categories from "../components/Categories";
 import HeroBanner from "../components/HeroBanner";
@@ -20,6 +20,13 @@ const bottomBanner = {
   buttonUrl: "www.google.com",
 };
 const Home = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    scrollTop();
+    fetch("products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
   useEffect(() => {
     scrollTop();
   }, []);
@@ -38,12 +45,9 @@ const Home = () => {
           Pottery Collection
         </h2>
         <div className="lg:px-0 px-[20px] grid lg:grid-cols-3 grid-cols-1 gap-[20px]">
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
-          <Product></Product>
+          {products?.map((product) => (
+            <Product key={product.trackNumber} product={product}></Product>
+          ))}
         </div>
         <div className="mt-[50px] text-center">
           <Button>VIEW ALL PRODUCTS</Button>
